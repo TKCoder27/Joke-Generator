@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator</title>
+    <!-- Include Google Font (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Joke Generator</h1>
+        <button id="generate-btn" class="btn">Generate Joke</button>
+        <div id="joke-container" class="joke-container">
+            <p id="joke" class="joke-text">Click the button to generate a joke!</p>
+        </div>
+    </div>
+    <div id="confetti-container"></div> <!-- Confetti container -->
+    <audio id="click-sound" src="click-sound.mp3"></audio> <!-- Click sound -->
+    <audio id="joke-sound" src="joke-sound.mp3"></audio> <!-- Joke sound -->
+    <script src="script.js"></script>
+</body>
+</html>

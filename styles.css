@@ -1,0 +1,122 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Use Poppins font family */
+body {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    background: linear-gradient(to right, #f3a683, #f7b7a3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 36px;
+    color: #333;
+    font-weight: 600; /* Bold weight for more prominence */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600; /* Bold font */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff4e3a;
+    transform: scale(1.1);
+}
+
+.joke-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.joke-text {
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Confetti animation */
+@keyframes confettiFall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.confetti {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ff6347;
+    animation: confettiFall 2s linear infinite;
+}
+
+.confetti:nth-child(odd) {
+    animation-duration: 2.5s;
+    background-color: #ffd700;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
